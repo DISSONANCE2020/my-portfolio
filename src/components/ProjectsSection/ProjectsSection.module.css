@@ -1,0 +1,67 @@
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.heading {
+  font-size: 24px;
+  color: #cee8fa;
+  margin-bottom: 36px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.projectLast {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageFrame {
+  background: rgba(179, 179, 179, 0.2);
+  border-radius: 5px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  /* Placeholder sizing for image */
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageStyling {
+  overflow: hidden;
+}
+
+.projectDetails {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.projectName {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.projectRole {
+  font-size: 9px;
+  color: #999999;
+}
+
+.projectDescription {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 12px;
+}
+
+.lineBreak {
+  margin-top: 12px;
+}

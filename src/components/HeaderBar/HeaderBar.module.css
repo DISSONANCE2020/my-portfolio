@@ -1,0 +1,50 @@
+.headerBar {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background: transparent;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.location {
+  font-size: 9px;
+  color: #999999;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+}

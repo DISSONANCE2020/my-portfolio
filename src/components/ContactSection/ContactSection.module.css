@@ -1,0 +1,128 @@
+.contactSection {
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.heading {
+  font-size: 24px;
+  color: #cee8fa;
+  margin-bottom: 36px;
+}
+
+.label {
+  color: #fff;
+  font-size: 12px;
+}
+
+.form {
+  flex: 1;
+  padding: var(--mantine-spacing-xl);
+  padding-left: calc(var(--mantine-spacing-xl) * 2);
+  border-left: 0;
+
+  @media (max-width: 768px) {
+    padding: var(--mantine-spacing-md);
+    padding-left: var(--mantine-spacing-md);
+  }
+}
+
+.fields {
+  margin-top: -12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.topField {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nameInput {
+  background: rgba(179, 179, 179, 0.2);
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 12px 0 12px 6px;
+  box-sizing: border-box;
+}
+
+.nameInput::placeholder {
+  color: rgba(179, 179, 179, 0.4);
+  font-size: 12px;
+}
+
+.emailAddressInput {
+  background: rgba(179, 179, 179, 0.2);
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 12px 0 12px 6px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.emailAddressInput::placeholder {
+  color: rgba(179, 179, 179, 0.4);
+  font-size: 12px;
+}
+
+.emailSubjectInput {
+  background: rgba(179, 179, 179, 0.2);
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 12px 0 12px 6px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.emailSubjectInput::placeholder {
+  color: rgba(179, 179, 179, 0.4);
+  font-size: 12px;
+}
+
+.emailMessageInput {
+  background: rgba(179, 179, 179, 0.2);
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 12px 0 12px 6px;
+  box-sizing: border-box;
+  min-height: 120px;
+  width: 100%;
+}
+
+.emailMessageInput::placeholder {
+  color: rgba(179, 179, 179, 0.4);
+  font-size: 12px;
+}
+
+.whiteInput {
+  color: #fff !important;
+}
+
+.fieldsGroup {
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.button {
+  background: rgba(179, 179, 179, 0.2);
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 6px;
+  box-sizing: border-box;
+  color: #fff;
+  margin-left: auto;
+  cursor: pointer;
+}

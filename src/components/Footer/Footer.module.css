@@ -1,0 +1,28 @@
+.footerSection {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.email {
+  color: #fff;
+  font-size: 12px;
+}
