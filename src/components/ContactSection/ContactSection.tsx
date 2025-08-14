@@ -11,14 +11,14 @@ export default function ContactSection() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
   const handleChange = (field: string, value: string) => {
     setForm((prev) => ({
       ...prev,
       [field]: value,
     }));
   };
+
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -38,7 +38,7 @@ export default function ContactSection() {
     });
 
     if (response.ok) {
-      setSubmitted(true);
+      setShowSuccess(true);
       setForm({
         firstName: "",
         lastName: "",
@@ -49,15 +49,13 @@ export default function ContactSection() {
     }
   };
 
-  const [showSuccess, setShowSuccess] = useState(false);
-
   useEffect(() => {
-    if (submitted) {
+    if (showSuccess) {
       setShowSuccess(true);
       const timer = setTimeout(() => setShowSuccess(false), 3000);
       return () => clearTimeout(timer);
     }
-  }, [submitted]);
+  }, [showSuccess]);
 
   return (
     <section className={styles.contactSection} id="contact">
@@ -136,7 +134,7 @@ export default function ContactSection() {
           >
             Send Message
           </Button>
-          {submitted && (
+          {showSuccess && (
             <Text
               mt="md"
               style={{
