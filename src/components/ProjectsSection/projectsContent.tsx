@@ -12,6 +12,8 @@ import tailwindLogo from "../../assets/logos/tailwindLogo.png";
 import hostingerLogo from "../../assets/logos/hostingerLogo.png";
 import junoLogo from "../../assets/logos/junoLogo.jpg";
 
+
+// Uncomment if more logos are needed
 // import jsLogo from "../../assets/logos/jsLogo.png";
 // import phpLogo from "../../assets/logos/phpLogo.png";
 // import nodeLogo from "../../assets/logos/nodeLogo.png";
