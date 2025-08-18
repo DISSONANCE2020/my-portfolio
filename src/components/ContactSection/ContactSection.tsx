@@ -50,11 +50,9 @@ export default function ContactSection() {
   };
 
   useEffect(() => {
-    if (showSuccess) {
-      setShowSuccess(true);
-      const timer = setTimeout(() => setShowSuccess(false), 3000);
-      return () => clearTimeout(timer);
-    }
+    if (!setShowSuccess) return;
+    const timer = setTimeout(() => setShowSuccess(false), 3000);
+    return () => clearTimeout(timer);
   }, [showSuccess]);
 
   return (
@@ -135,22 +133,7 @@ export default function ContactSection() {
             Send Message
           </Button>
           {showSuccess && (
-            <Text
-              mt="md"
-              style={{
-                color: "green",
-                position: "absolute",
-                top: "67%",
-                left: "50%",
-                transform: "translate(-50%, 0)",
-                background: "rgba(255, 255, 255)",
-                padding: "1rem 2rem",
-                borderRadius: "8px",
-                zIndex: 10,
-                transition: "opacity 0.5s",
-                opacity: showSuccess ? 1 : 0,
-              }}
-            >
+            <Text mt="md" className={styles.successOverlay}>
               Message Sent!
             </Text>
           )}
