@@ -4,21 +4,76 @@ import ssphWebApp from "../../assets/images/ProjectsSection/ssphWebApp.png";
 import ssphWebsite from "../../assets/images/ProjectsSection/ssphWebsite.png";
 import readWithMe from "../../assets/images/ProjectsSection/readWithMe.png";
 
+// LOGOS
+import reactLogo from "../../assets/logos/reactLogo.png";
+import laravelLogo from "../../assets/logos/laravelLogo.png";
+import figmaLogo from "../../assets/logos/figmaLogo.png";
+import tailwindLogo from "../../assets/logos/tailwindLogo.png";
+import hostingerLogo from "../../assets/logos/hostingerLogo.png";
+import junoLogo from "../../assets/logos/junoLogo.jpg";
+
+// import jsLogo from "../../assets/logos/jsLogo.png";
+// import phpLogo from "../../assets/logos/phpLogo.png";
+// import nodeLogo from "../../assets/logos/nodeLogo.png";
+// import xamppLogo from "../../assets/logos/xamppLogo.png";
+// import mysqlLogo from "../../assets/logos/mysqlLogo.png";
+// import postmanLogo from "../../assets/logos/postmanLogo.png";
+// import mantineLogo from "../../assets/logos/mantineLogo.svg";
+// import typescriptLogo from "../../assets/logos/typescriptLogo.png";
+
+export type StackItem = {
+  logo: string;
+  label: string;
+};
+
 export type Project = {
   image: string;
   alt: string;
   name: string;
   role: string;
+  stack: StackItem[];
   description: React.ReactNode;
   last?: boolean;
 };
 
 export const projects: Project[] = [
   {
+    image: readWithMe,
+    alt: "ReadWithMe",
+    name: "ReadWithMe",
+    role: "Front-End Developer, UI/UX Designer",
+    stack: [
+      { logo: reactLogo, label: "React" },
+      { logo: junoLogo, label: "Juno" },
+      { logo: tailwindLogo, label: "Tailwind CSS" },
+      { logo: figmaLogo, label: "Figma" },
+    ],
+    description: (
+      <>
+        I originated the full concept for ReadWithMe—an award-winning AI‑driven
+        gamified reading platform—serving as UI/UX Designer and front‑end
+        developer.
+        <div className={styles.lineBreak} />
+        From idea to MVP, I created user flows, wireframes, and UI in Figma,
+        then built the interactive React.js interface featuring rewards,
+        progress tracking, and AI feedback.
+        <div className={styles.lineBreak} />
+        This concept-to-launch project earned top recognition at the Regional
+        Assembly of Information Technology Education 2024.
+      </>
+    ),
+  },
+  {
     image: ssphWebApp,
     alt: "SuitescapePH Web Application",
     name: "SuitescapePH Web Application",
     role: "Full-Stack Developer, UI/UX Designer",
+    stack: [
+      { logo: reactLogo, label: "React" },
+      { logo: laravelLogo, label: "Laravel 11" },
+      { logo: tailwindLogo, label: "Tailwind CSS" },
+      { logo: figmaLogo, label: "Figma" },
+    ],
     description: (
       <>
         I served as UI/UX Designer and full‑stack developer on the admin
@@ -36,6 +91,7 @@ export const projects: Project[] = [
     alt: "SuitescapePH Website",
     name: "SuitescapePH Website",
     role: "Website Designer",
+    stack: [{ logo: hostingerLogo, label: "Hostinger" }],
     description: (
       <>
         As Website Designer, I used Hostinger's built-in drag‑and‑drop website
@@ -44,25 +100,6 @@ export const projects: Project[] = [
         selected templates, and customized visual assets and brand elements
         directly within Hostinger’s editor, ensuring a crisp, accessible, and
         engaging web presence.
-      </>
-    ),
-  },
-  {
-    image: readWithMe,
-    alt: "ReadWithMe",
-    name: "ReadWithMe",
-    role: "Front-End Developer, UI/UX Designer",
-    description: (
-      <>
-        I originated the full concept for ReadWithMe—an AI‑driven gamified
-        reading platform—serving as UI/UX Designer and front‑end developer.
-        <div className={styles.lineBreak} />
-        From idea to MVP, I created user flows, wireframes, and UI in Figma,
-        then built the interactive React.js interface featuring rewards,
-        progress tracking, and AI feedback.
-        <div className={styles.lineBreak} />
-        This concept-to-launch project earned top recognition at the Regional
-        Assembly of Information Technology Education 2024.
       </>
     ),
     last: true,

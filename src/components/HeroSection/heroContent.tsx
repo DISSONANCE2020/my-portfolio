@@ -5,11 +5,11 @@ import phpLogo from "../../assets/logos/phpLogo.png";
 import nodeLogo from "../../assets/logos/nodeLogo.png";
 import xamppLogo from "../../assets/logos/xamppLogo.png";
 import mysqlLogo from "../../assets/logos/mysqlLogo.png";
-import githubLogo from "../../assets/logos/githubLogo.png";
 import postmanLogo from "../../assets/logos/postmanLogo.png";
 import figmaLogo from "../../assets/logos/figmaLogo.png";
 import tailwindLogo from "../../assets/logos/tailwindLogo.png";
 import mantineLogo from "../../assets/logos/mantineLogo.svg";
+import typescriptLogo from "../../assets/logos/typescriptLogo.png";
 
 export const gridCells = [
   // Row 1
@@ -22,13 +22,17 @@ export const gridCells = [
   },
 
   // Row 2
+  {
+    logo: typescriptLogo,
+    text: "TypeScript",
+    href: "https://www.typescriptlang.org/docs/",
+  },
   { logo: phpLogo, text: "PHP", href: "https://www.php.net/docs.php" },
-  { logo: nodeLogo, text: "Node.js", href: "https://nodejs.org/en" },
-  { logo: xamppLogo, text: "XAMPP", href: "https://www.apachefriends.org/" },
+  { logo: nodeLogo, text: "NodeJS", href: "https://nodejs.org/en" },
 
   // Row 3
+  { logo: xamppLogo, text: "XAMPP", href: "https://www.apachefriends.org/" },
   { logo: mysqlLogo, text: "MySQL", href: "https://www.mysql.com/" },
-  { logo: githubLogo, text: "GitHub", href: "https://github.com/" },
   { logo: postmanLogo, text: "Postman", href: "https://www.postman.com/" },
 
   // Row 4

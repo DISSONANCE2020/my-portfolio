@@ -19,7 +19,20 @@ export default function ProjectsSection() {
             />
           </div>
           <div className={styles.projectDetails}>
-            <span className={styles.projectName}>{project.name}</span>
+            <div className={styles.topRow}>
+              <span className={styles.projectName}>{project.name}</span>
+              <span className={styles.logo}>
+                {project.stack.map((item, idx) => (
+                  <span key={idx}>
+                    <img
+                      src={item.logo}
+                      alt={item.label}
+                      className={styles.logo}
+                    />
+                  </span>
+                ))}
+              </span>
+            </div>
             <span className={styles.projectRole}>{project.role}</span>
             <span className={styles.projectDescription}>
               {project.description}
