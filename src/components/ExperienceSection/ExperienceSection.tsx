@@ -6,15 +6,15 @@ export default function ExperienceSection({
 }: {
   showFull?: boolean;
 }) {
-  const visibleExperiences = showFull ? experiences : experiences.slice(0, 3);
+  const visibleContent = showFull ? experiences : experiences.slice(0, 3);
 
   return (
     <section className={styles.experienceSection} id="experience">
       <span className={styles.heading}>Experience</span>
-      {visibleExperiences.map((exp, idx) => (
+      {visibleContent.map((exp, idx) => (
         <div
           className={
-            idx === visibleExperiences.length - 1 && showFull
+            idx === visibleContent.length - 1 && showFull
               ? styles.positionWholeLast
               : styles.positionWhole
           }

@@ -2,14 +2,19 @@ import styles from "./ProjectsSection.module.css";
 
 import { projects } from "./projectsContent";
 
-export default function ProjectsSection() {
+export default function ProjectsSection({ showFull }: { showFull?: boolean }) {
+  const visibleContent = showFull ? projects : projects.slice(0, 3);
   return (
-    <section className={styles.projectsSection} id="projects">
+    <section className={styles.projectsSection} id='projects'>
       <span className={styles.heading}>Projects</span>
-      {projects.map((project) => (
+      {visibleContent.map((project, idx) => (
         <div
           key={project.name}
-          className={project.last ? styles.projectLast : styles.project}
+          className={
+            idx === visibleContent.length - 1 && showFull
+              ? styles.projectLast
+              : styles.project
+          }
         >
           <div className={styles.imageFrame}>
             <img

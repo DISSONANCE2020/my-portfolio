@@ -16,7 +16,7 @@ export default function SectionDivider({
         style={{
           width: "100%",
           height: "1px",
-          background: "rgba(179, 179, 179, 0.2)",
+          background: "#b3b3b333",
         }}
       />
       {children && (

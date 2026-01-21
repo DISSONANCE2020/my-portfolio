@@ -1,3 +1,4 @@
+/* PROJECTS SECTION */
 .projectsSection {
   display: flex;
   flex-direction: column;
@@ -7,73 +8,199 @@
   padding-right: 16px;
 }
 
+@media (min-width: 768px) {
+  .projectsSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectsSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* HEADING */
 .heading {
   font-size: 24px;
   color: #cee8fa;
   margin-bottom: 36px;
 }
 
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 32px;
+    color: #cee8fa;
+    margin-bottom: 36px;
+  }
+}
+
+/* PROJECT */
 .project {
   display: flex;
   flex-direction: column;
   margin-bottom: 36px;
 }
 
+@media (min-width: 1024px) {
+  .project {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 36px;
+  }
+}
+
+/* PROJECT LAST */
 .projectLast {
   display: flex;
   flex-direction: column;
 }
 
+@media (min-width: 1024px) {
+  .projectLast {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 36px;
+  }
+}
+
+/* IMAGE FRAME */
 .imageFrame {
   background: rgba(179, 179, 179, 0.2);
   border-radius: 5px;
   padding: 12px 0;
   box-sizing: border-box;
-  /* Placeholder sizing for image */
   min-height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.imageStyling {
-  overflow: hidden;
+@media (min-width: 1024px) {
+  .imageFrame {
+    background: rgba(179, 179, 179, 0.2);
+    border-radius: 5px;
+    padding: 12px 0;
+    box-sizing: border-box;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
+/* IMAGE STYLING */
+
+.imageStyling {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PROJECT DETAILS */
 .projectDetails {
   display: flex;
   flex-direction: column;
   margin-top: 12px;
 }
 
+@media (min-width: 1024px) {
+  .projectDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 36px;
+  }
+}
+
+/* PROJECT NAME */
 .projectName {
   font-size: 12px;
   color: #ffffff;
 }
 
+@media (min-width: 1024px) {
+  .projectName {
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
+
+/* PROJECT ROLE */
 .projectRole {
   font-size: 9px;
   color: #999999;
 }
 
+@media (min-width: 1024px) {
+  .projectRole {
+    font-size: 12px;
+    color: #999999;
+  }
+}
+
+/* PROJECT DESCRIPTION */
 .projectDescription {
   font-size: 12px;
   color: #ffffff;
   margin-top: 12px;
 }
 
+@media (min-width: 1024px) {
+  .projectDescription {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 18px;
+  }
+}
+
+/* TOP ROW */
 .topRow {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+@media (min-width: 1024px) {
+  .topRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* LOGO */
 .logo {
   height: 12px;
   margin-left: 8px;
   object-fit: contain;
 }
 
+@media (min-width: 1024px) {
+  .logo {
+    height: 12px;
+    margin-left: 8px;
+    object-fit: contain;
+  }
+}
+
+/* LINE BREAK */
 .lineBreak {
   margin-top: 12px;
+}
+
+@media (min-width: 1024px) {
+  .lineBreak {
+    margin-top: 18px;
+  }
 }

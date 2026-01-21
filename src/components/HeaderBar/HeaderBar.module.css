@@ -7,6 +7,28 @@
   background: transparent;
 }
 
+@media (min-width: 768px) {
+  .headerBar {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 36px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: transparent;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerBar {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 36px;
+    padding-left: 48px;
+    padding-right: 48px;
+    background: transparent;
+  }
+}
+
 .inner {
   display: flex;
   justify-content: space-between;
@@ -20,17 +42,36 @@
 }
 
 .name {
-  font-size: 12px;
+  font-size: 10px;
   color: #fff;
   font-weight: 400;
   line-height: 1;
 }
 
+@media (min-width: 375px) {
+.name {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1;
+}
+}
+
+.location {
+  font-size: 8px;
+  color: #999999;
+  font-weight: 400;
+  line-height: 1;
+}
+
+@media (min-width: 375px) {
 .location {
   font-size: 9px;
   color: #999999;
   font-weight: 400;
   line-height: 1;
+}
+
 }
 
 .nav {
@@ -42,9 +83,78 @@
   background: none;
   border: none;
   color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (min-width: 375px) {
+.navButton {
+  background: none;
+  border: none;
+  color: #fff;
   font-size: 12px;
   font-weight: 400;
   padding: 0;
   cursor: pointer;
   text-decoration: none;
+}
+}
+
+
+/* DESKTOP STYLING */
+
+@media (min-width: 1024px) {
+  .headerBar {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 36px;
+    padding-left: 48px;
+    padding-right: 48px;
+    background: transparent;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .location {
+    font-size: 12px;
+    color: #999999;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .nav {
+    display: flex;
+    gap: 16px;
+  }
+
+  .navButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+  }
 }

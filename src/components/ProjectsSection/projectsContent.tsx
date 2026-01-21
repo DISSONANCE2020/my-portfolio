@@ -3,6 +3,8 @@ import styles from "./ProjectsSection.module.css";
 import ssphWebApp from "../../assets/images/ProjectsSection/ssphWebApp.png";
 import ssphWebsite from "../../assets/images/ProjectsSection/ssphWebsite.png";
 import readWithMe from "../../assets/images/ProjectsSection/readWithMe.png";
+import locabuddy from "../../assets/images/ProjectsSection/locabuddy.png";
+import smartEd from "../../assets/images/ProjectsSection/smartEd.png";
 
 // LOGOS
 import reactLogo from "../../assets/logos/reactLogo.png";
@@ -11,7 +13,7 @@ import figmaLogo from "../../assets/logos/figmaLogo.png";
 import tailwindLogo from "../../assets/logos/tailwindLogo.png";
 import hostingerLogo from "../../assets/logos/hostingerLogo.png";
 import junoLogo from "../../assets/logos/junoLogo.jpg";
-
+import mantineLogo from "../../assets/logos/mantineLogo.svg";
 
 // Uncomment if more logos are needed
 // import jsLogo from "../../assets/logos/jsLogo.png";
@@ -40,6 +42,44 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    image: smartEd,
+    alt: "SMARTEd",
+    name: "SMART Ed",
+    role: "Front-End Developer",
+    stack: [
+      { logo: reactLogo, label: "React" },
+      { logo: mantineLogo, label: "Mantine CSS" },
+    ],
+    description: (
+      <>
+        Co-lead front-end development for SMART Ed, a public directory and
+        dashboard for the Department of Education Schools Division of Mabalacat
+        City.
+      </>
+    ),
+  },
+  {
+    image: locabuddy,
+    alt: "LocaBuddy",
+    name: "LocaBuddy Mobile App",
+    role: "Front-End Developer, UI/UX Designer",
+    stack: [
+      { logo: reactLogo, label: "React" },
+      { logo: mantineLogo, label: "Mantine CSS" },
+      { logo: figmaLogo, label: "Figma" },
+    ],
+    description: (
+      <>
+        Solely built app components and flow of LocaBuddy—a gamified
+        accountability buddy mobile app designed to ensure users follow their
+        designated personal schedules.
+        <div className={styles.lineBreak} />
+        Designed app branding and flow, from authorization to map and menu
+        interface.
+      </>
+    ),
+  },
+  {
     image: readWithMe,
     alt: "ReadWithMe",
     name: "ReadWithMe",
@@ -52,16 +92,13 @@ export const projects: Project[] = [
     ],
     description: (
       <>
-        I originated the full concept for ReadWithMe—an award-winning AI‑driven
-        gamified reading platform—serving as UI/UX Designer and front‑end
-        developer.
+        Originated the full concept for ReadWithMe—an AI‑driven gamified reading
+        platform that earned top recognition at the Regional Assembly of
+        Information Technology Education 2024.
         <div className={styles.lineBreak} />
-        From idea to MVP, I created user flows, wireframes, and UI in Figma,
-        then built the interactive React.js interface featuring rewards,
-        progress tracking, and AI feedback.
-        <div className={styles.lineBreak} />
-        This concept-to-launch project earned top recognition at the Regional
-        Assembly of Information Technology Education 2024.
+        Created user flows, wireframes, and UI in Figma, then built the
+        interactive React.js interface featuring rewards, progress tracking, and
+        AI feedback.
       </>
     ),
   },

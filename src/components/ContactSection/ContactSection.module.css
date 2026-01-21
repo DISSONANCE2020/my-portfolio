@@ -1,55 +1,182 @@
+/* CONTACT SECTION */
 .contactSection {
   display: flex;
-  margin-left: 16px;
-  margin-right: 16px;
-  flex-direction: column;
+  margin-top: 36px;
   margin-bottom: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
+@media (min-width: 768px) {
+  .contactSection {
+    display: flex;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contactSection {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* IMAGE */
+
+.imageContainer {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .imageContainer {
+    display: flex;
+    flex: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .imageContainer {
+    display: flex;
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* HEADING */
 .heading {
   font-size: 24px;
   color: #cee8fa;
   margin-bottom: 36px;
+  margin-top: calc(-1 * var(--mantine-spacing-xl));
 }
 
+@media (max-width: 768px) {
+  .heading {
+    margin-top: calc(-1 * var(--mantine-spacing-md));
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 32px;
+    color: #cee8fa;
+    margin-bottom: 36px;
+  }
+}
+
+/* LABEL */
 .label {
   color: #fff;
   font-size: 12px;
 }
 
-.form {
-  flex: 1;
-  padding: var(--mantine-spacing-xl);
-  padding-left: calc(var(--mantine-spacing-xl) * 2);
-  border-left: 0;
-
-  @media (max-width: 768px) {
-    padding: var(--mantine-spacing-md);
-    padding-left: var(--mantine-spacing-md);
+@media (min-width: 1024px) {
+  .label {
+    color: #fff;
+    font-size: 16px;
   }
 }
 
+/* FORM */
+.form {
+  border-left: 0;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .form {
+    flex: 2;
+    width: auto;
+    border-left: 0;
+  }
+}
+
+@media (min-width: 1840px) {
+  .form {
+    flex: 3;
+    width: auto;
+    border-left: 0;
+  }
+}
+
+/* FIELDS */
 .fields {
+  width: 100%;
   margin-top: -12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  position: relative;
 }
 
+@media (min-width: 425px) {
+  .fields {
+    width: 100%;
+    margin-top: -12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fields {
+    width: 75%;
+    margin-top: -12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* TOP FIELD */
 .topField {
   display: flex;
+  flex: 1;
   flex-direction: row;
+  gap: 16px;
   justify-content: space-between;
 }
 
+@media (min-width: 1024px) {
+  .topField {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* NAME INPUT WRAPPER */
+.nameInputWrapper {
+  flex: 1;
+}
+
+/* NAME INPUT */
 .nameInput {
   background: rgba(179, 179, 179, 0.2);
   border-style: solid;
   border-radius: 5px;
+  border-radius: 5px;
   border-width: 1px;
   padding: 12px 0 12px 6px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .nameInput::placeholder {
@@ -57,6 +184,25 @@
   font-size: 12px;
 }
 
+@media (min-width: 1024px) {
+  .nameInput {
+    background: rgba(179, 179, 179, 0.2);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 12px 0 12px 6px;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1;
+  }
+
+  .nameInput::placeholder {
+    color: rgba(179, 179, 179, 0.4);
+    font-size: 16px;
+  }
+}
+
+/* EMAIL ADDRESS INPUT */
 .emailAddressInput {
   background: rgba(179, 179, 179, 0.2);
   border-style: solid;
@@ -72,6 +218,24 @@
   font-size: 12px;
 }
 
+@media (min-width: 1024px) {
+  .emailAddressInput {
+    background: rgba(179, 179, 179, 0.2);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 12px 0 12px 6px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .emailAddressInput::placeholder {
+    color: rgba(179, 179, 179, 0.4);
+    font-size: 16px;
+  }
+}
+
+/* EMAIL SUBJECT INPUT */
 .emailSubjectInput {
   background: rgba(179, 179, 179, 0.2);
   border-style: solid;
@@ -87,6 +251,24 @@
   font-size: 12px;
 }
 
+@media (min-width: 1024px) {
+  .emailSubjectInput {
+    background: rgba(179, 179, 179, 0.2);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 12px 0 12px 6px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .emailSubjectInput::placeholder {
+    color: rgba(179, 179, 179, 0.4);
+    font-size: 16px;
+  }
+}
+
+/* EMAIL MESSAGE INPUT */
 .emailMessageInput {
   background: rgba(179, 179, 179, 0.2);
   border-style: solid;
@@ -103,10 +285,36 @@
   font-size: 12px;
 }
 
+@media (min-width: 1024px) {
+  .emailMessageInput {
+    background: rgba(179, 179, 179, 0.2);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 12px 0 12px 6px;
+    box-sizing: border-box;
+    min-height: 120px;
+    width: 100%;
+  }
+
+  .emailMessageInput::placeholder {
+    color: rgba(179, 179, 179, 0.4);
+    font-size: 16px;
+  }
+}
+
+/* WHITE INPUT */
 .whiteInput {
   color: #fff !important;
 }
 
+@media (min-width: 1024px) {
+  .whiteInput {
+    color: #fff !important;
+  }
+}
+
+/* FIELDS GROUP */
 .fieldsGroup {
   display: flex;
 
@@ -115,6 +323,17 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .fieldsGroup {
+    display: flex;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+/* BUTTON */
 .button {
   background: rgba(179, 179, 179, 0.2);
   border-style: solid;
@@ -127,6 +346,21 @@
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  .button {
+    background: rgba(179, 179, 179, 0.2);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
+
+/* SUCCESS OVERLAY */
 .successOverlay {
   color: green;
   position: absolute;
@@ -139,4 +373,20 @@
   z-index: 10;
   transition: opacity 0.5s;
   opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .successOverlay {
+    color: green;
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: rgba(255, 255, 255);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    z-index: 10;
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
 }

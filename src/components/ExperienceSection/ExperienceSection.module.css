@@ -1,3 +1,4 @@
+/* EXPERIENCE SECTION */
 .experienceSection {
   display: flex;
   flex-direction: column;
@@ -7,63 +8,179 @@
   padding-right: 16px;
 }
 
+@media (min-width: 768px) {
+.experienceSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experienceSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* HEADING */
 .heading {
   font-size: 24px;
   color: #cee8fa;
   margin-bottom: 36px;
 }
 
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 32px;
+    color: #cee8fa;
+    margin-bottom: 36px;
+  }
+}
+
+/* POSITION WHOLE */
 .positionWhole {
   display: flex;
   flex-direction: column;
   margin-bottom: 36px;
 }
 
+@media (min-width: 1024px) {
+  .positionWhole {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+  }
+}
+
+/* POSITION WHOLE LAST */
 .positionWholeLast {
   display: flex;
   flex-direction: column;
 }
 
+@media (min-width: 1024px) {
+  .positionWholeLast {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* POSITION HEADER */
 .positionHeader {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
+@media (min-width: 1024px) {
+  .positionHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* PHOTO */
 .photo {
   width: 36px;
   height: 36px;
   object-fit: cover;
 }
 
+@media (min-width: 1024px) {
+  .photo {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+  }
+}
+
+/* TITLE */
 .title {
   display: flex;
   flex-direction: column;
   margin-left: 12px;
 }
 
+@media (min-width: 1024px) {
+  .title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+}
+
+/* POSITION */
 .position {
   font-size: 12px;
   color: #ffffff;
 }
 
+@media (min-width: 1024px) {
+  .position {
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
+
+/* ORGANIZATION */
 .organization {
   font-size: 9px;
   color: #999999;
 }
 
+@media (min-width: 1024px) {
+  .organization {
+    font-size: 12px;
+    color: #999999;
+  }
+}
+
+/* DESCRIPTION */
 .description {
   margin-top: 12px;
   font-size: 12px;
   color: #ffffff;
 }
 
+@media (min-width: 1024px) {
+  .description {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+}
+
+/* DATE */
 .date {
   margin-top: 12px;
   font-size: 12px;
   color: #999999;
 }
 
+@media (min-width: 1024px) {
+  .date {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #999999;
+  }
+}
+
+/* LINE BREAK */
 .lineBreak {
   margin-top: 12px;
+}
+
+@media (min-width: 1024px) {
+  .lineBreak {
+    margin-top: 12px;
+  }
 }

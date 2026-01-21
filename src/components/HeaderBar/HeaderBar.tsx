@@ -19,7 +19,7 @@ export default function HeaderBar() {
       <div className={styles.inner}>
         {/* {Left Side} */}
         <div className={styles.left}>
-          <span className={styles.name}>Gab Cruz</span>
+          <span className={styles.name}>Jose Gabriel Cruz</span>
           <span className={styles.location}>Bataan, Philippines</span>
         </div>
         {/* {Right Side} */}

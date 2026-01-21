@@ -1,11 +1,35 @@
 .footerSection {
   margin-top: 12px;
   margin-bottom: 12px;
-  margin-left: 16px;
-  margin-right: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+.footerSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerSection {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .leftSection {
@@ -24,5 +48,12 @@
 
 .email {
   color: #fff;
+  font-size: 10px;
+}
+
+@media (min-width: 375px) {
+.email {
+  color: #fff;
   font-size: 12px;
+}
 }

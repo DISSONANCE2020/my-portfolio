@@ -11,15 +11,17 @@ import SectionDivider from "./components/SectionDivider";
 import "./styles/global.css";
 
 export default function App() {
-  const [showFullExperience, setShowFullExperience] = useState(false);
+  const [showFullContent, setShowFullContent] = useState(false);
 
   return (
     <MantineProvider>
       <div
-        className="app-background"
+        className='app-background'
         style={{
           minHeight: "100vh",
-          width: "100vw",
+          width: "100%",
+          overflowX: "hidden",
+          overflowY: "auto",
           backgroundImage: 'url("/background.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -31,7 +33,7 @@ export default function App() {
         <HeaderBar />
         <HeroSection />
         <SectionDivider />
-        <ExperienceSection showFull={showFullExperience} />
+        <ExperienceSection showFull={showFullContent} />
         <SectionDivider>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <button
@@ -48,9 +50,9 @@ export default function App() {
                 fontWeight: "bold",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
               }}
-              onClick={() => setShowFullExperience((prev) => !prev)}
+              onClick={() => setShowFullContent((prev) => !prev)}
             >
-              {showFullExperience ? (
+              {showFullContent ? (
                 <FaChevronUp size={18} />
               ) : (
                 <FaChevronDown size={18} />
@@ -58,8 +60,33 @@ export default function App() {
             </button>
           </div>
         </SectionDivider>
-        <ProjectsSection />
-        <SectionDivider />
+        <ProjectsSection showFull={showFullContent} />
+        <SectionDivider>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <button
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                padding: "0.5rem 1.5rem",
+                borderRadius: "999px",
+                border: "none",
+                background: "#2f3358ff",
+                color: "#fff",
+                cursor: "pointer",
+                fontWeight: "bold",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+              }}
+              onClick={() => setShowFullContent((prev) => !prev)}
+            >
+              {showFullContent ? (
+                <FaChevronUp size={18} />
+              ) : (
+                <FaChevronDown size={18} />
+              )}
+            </button>
+          </div>
+        </SectionDivider>
         <ContactSection />
         <SectionDivider />
         <Footer />
