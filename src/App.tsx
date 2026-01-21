@@ -11,7 +11,8 @@ import SectionDivider from "./components/SectionDivider";
 import "./styles/global.css";
 
 export default function App() {
-  const [showFullContent, setShowFullContent] = useState(false);
+  const [showFullExperience, setShowFullExperience] = useState(false);
+    const [showFullProjects, setShowFullProjects] = useState(false);
 
   return (
     <MantineProvider>
@@ -33,7 +34,7 @@ export default function App() {
         <HeaderBar />
         <HeroSection />
         <SectionDivider />
-        <ExperienceSection showFull={showFullContent} />
+        <ExperienceSection showFull={showFullExperience} />
         <SectionDivider>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <button
@@ -50,9 +51,9 @@ export default function App() {
                 fontWeight: "bold",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
               }}
-              onClick={() => setShowFullContent((prev) => !prev)}
+              onClick={() => setShowFullExperience((prev) => !prev)}
             >
-              {showFullContent ? (
+              {showFullExperience ? (
                 <FaChevronUp size={18} />
               ) : (
                 <FaChevronDown size={18} />
@@ -60,7 +61,7 @@ export default function App() {
             </button>
           </div>
         </SectionDivider>
-        <ProjectsSection showFull={showFullContent} />
+        <ProjectsSection showFull={showFullProjects} />
         <SectionDivider>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <button
@@ -77,9 +78,9 @@ export default function App() {
                 fontWeight: "bold",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
               }}
-              onClick={() => setShowFullContent((prev) => !prev)}
+              onClick={() => setShowFullProjects((prev) => !prev)}
             >
-              {showFullContent ? (
+              {showFullProjects ? (
                 <FaChevronUp size={18} />
               ) : (
                 <FaChevronDown size={18} />
