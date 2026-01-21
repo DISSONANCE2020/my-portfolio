@@ -104,8 +104,8 @@ export const projects: Project[] = [
   },
   {
     image: ssphWebApp,
-    alt: "SuitescapePH Web Application",
-    name: "SuitescapePH Web Application",
+    alt: "SuitescapePH Content Management System",
+    name: "SuitescapePH Content Management System",
     role: "Full-Stack Developer, UI/UX Designer",
     stack: [
       { logo: reactLogo, label: "React" },
@@ -115,13 +115,12 @@ export const projects: Project[] = [
     ],
     description: (
       <>
-        I served as UI/UX Designer and full‑stack developer on the admin
-        dashboard using React.js and Laravel 11.
+        Lead front-end development of secure, responsive workflows for managing
+        the mobile app’s content, users, and financials—bridging admin needs
+        into a functional, maintainable web system.
         <div className={styles.lineBreak} />
-        Leveraging intuitive wireframes and polished interfaces, I implemented
-        secure, responsive workflows for managing the mobile app’s content,
-        users, and finance—bridging admin needs into a functional, maintainable
-        web system.
+        Designed the overall page layout and content manager’s dashboard for
+        moderating user content.
       </>
     ),
   },
@@ -133,12 +132,11 @@ export const projects: Project[] = [
     stack: [{ logo: hostingerLogo, label: "Hostinger" }],
     description: (
       <>
-        As Website Designer, I used Hostinger's built-in drag‑and‑drop website
-        builder to conceive, style, and launch the public marketing site.
-        <div className={styles.lineBreak} />I crafted responsive layouts,
-        selected templates, and customized visual assets and brand elements
-        directly within Hostinger’s editor, ensuring a crisp, accessible, and
-        engaging web presence.
+        Crafted responsive layouts, and customized visual assets and brand
+        elements directly within Hostinger’s editor, ensuring a crisp,
+        accessible, and engaging web presence
+        <div className={styles.lineBreak} />
+        Crafted promotional materials for the mobile app’s beta testing phase.
       </>
     ),
     last: true,
