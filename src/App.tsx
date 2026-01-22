@@ -12,7 +12,7 @@ import "./styles/global.css";
 
 export default function App() {
   const [showFullExperience, setShowFullExperience] = useState(false);
-    const [showFullProjects, setShowFullProjects] = useState(false);
+  const [showFullProjects, setShowFullProjects] = useState(false);
 
   return (
     <MantineProvider>
@@ -24,6 +24,7 @@ export default function App() {
           overflowX: "hidden",
           overflowY: "auto",
           backgroundImage: 'url("/background.png")',
+          backgroundColor: "#010134",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
