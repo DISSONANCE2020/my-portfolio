@@ -26,7 +26,7 @@ export const experiences: Experience[] = [
         accounts, and financial reports.
       </>
     ),
-    date: "Present",
+    date: "2025-2026",
   },
   {
     logo: ictduLogo,
@@ -59,7 +59,7 @@ export const experiences: Experience[] = [
         and ensuring brand consistency across all digital touchpoints.
       </>
     ),
-    date: "2024-2025",
+    date: "2024-2026",
   },
   {
     logo: ictduLogo,
@@ -72,7 +72,7 @@ export const experiences: Experience[] = [
         documents—including the 2024–2025 uniform design.
       </>
     ),
-    date: "2024-2025",
+    date: "2024-2026",
   },
   {
     logo: likhaLogo,
