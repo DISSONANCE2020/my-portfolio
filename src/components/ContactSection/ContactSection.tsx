@@ -158,11 +158,6 @@ export default function ContactSection() {
             Send Message
           </Button>
           <ToastContainer />
-          {showSuccess && (
-            <Text mt="md" className={styles.successOverlay}>
-              Message Sent!
-            </Text>
-          )}
         </div>
       </form>
       <div className={styles.imageContainer}>
