@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button, Text, Textarea, TextInput } from "@mantine/core";
+import { ToastContainer, toast } from "react-toastify";
 import Squidward from "../../assets/images/ContactSection/Squidward.png";
 import styles from "./ContactSection.module.css";
 
@@ -18,6 +19,8 @@ export default function ContactSection() {
       [field]: value,
     }));
   };
+
+  const messageSentToast = () => toast.success("Message Sent!");
 
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -52,12 +55,13 @@ export default function ContactSection() {
 
   useEffect(() => {
     if (!showSuccess) return;
+    messageSentToast();
     const timer = setTimeout(() => setShowSuccess(false), 3000);
     return () => clearTimeout(timer);
   }, [showSuccess]);
 
   return (
-    <section className={styles.contactSection} id='contact'>
+    <section className={styles.contactSection} id="contact">
       <form
         className={styles.form}
         onSubmit={(event) => event.preventDefault()}
@@ -66,8 +70,8 @@ export default function ContactSection() {
         <div className={styles.fields}>
           <div className={styles.topField}>
             <TextInput
-              label='First Name'
-              placeholder='First Name'
+              label="First Name"
+              placeholder="First Name"
               classNames={{
                 root: styles.nameInputWrapper,
                 input: `${styles.nameInput} ${styles.whiteInput}`,
@@ -77,8 +81,8 @@ export default function ContactSection() {
               onChange={(e) => handleChange("firstName", e.currentTarget.value)}
             />
             <TextInput
-              label='Last Name'
-              placeholder='Last Name'
+              label="Last Name"
+              placeholder="Last Name"
               classNames={{
                 root: styles.nameInputWrapper,
                 input: `${styles.nameInput} ${styles.whiteInput}`,
@@ -90,8 +94,8 @@ export default function ContactSection() {
           </div>
 
           <TextInput
-            label='Your Email'
-            placeholder='youremail@domain.com'
+            label="Your Email"
+            placeholder="youremail@domain.com"
             classNames={{
               input: `${styles.emailAddressInput} ${styles.whiteInput}`,
               label: styles.label,
@@ -102,9 +106,9 @@ export default function ContactSection() {
           />
 
           <TextInput
-            mt='md'
-            label='Subject'
-            placeholder='Subject'
+            mt="md"
+            label="Subject"
+            placeholder="Subject"
             classNames={{
               input: `${styles.emailSubjectInput} ${styles.whiteInput}`,
               label: styles.label,
@@ -115,9 +119,9 @@ export default function ContactSection() {
           />
 
           <Textarea
-            mt='md'
-            label='Your Message'
-            placeholder='Please include all relevant information'
+            mt="md"
+            label="Your Message"
+            placeholder="Please include all relevant information"
             classNames={{
               input: `${styles.emailMessageInput} ${styles.whiteInput}`,
               label: styles.label,
@@ -129,22 +133,23 @@ export default function ContactSection() {
           />
 
           <Button
-            type='submit'
+            type="submit"
             className={styles.button}
             onClick={handleSubmit}
           >
             Send Message
           </Button>
+          <ToastContainer />
           {showSuccess && (
-            <Text mt='md' className={styles.successOverlay}>
+            <Text mt="md" className={styles.successOverlay}>
               Message Sent!
             </Text>
           )}
         </div>
       </form>
-              <div className={styles.imageContainer}>
-          <img src={Squidward} alt='koko' className={styles.image} />
-        </div>
+      <div className={styles.imageContainer}>
+        <img src={Squidward} alt="koko" className={styles.image} />
+      </div>
     </section>
   );
 }
