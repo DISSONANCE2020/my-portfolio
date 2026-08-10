@@ -22,11 +22,20 @@ export default function ContactSection() {
 
   const messageSentToast = () => toast.success("Message Sent!");
 
+  const messageErrorToast = () =>
+    toast.error(
+      "Failed to send message. Please check all the necessary fields.",
+    );
+
   const [showSuccess, setShowSuccess] = useState(false);
+  const [disableSubmit, setDisableSubmit] = useState(true);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!form.email || !form.subject || !form.message) return;
+    if (!form.email || !form.subject || !form.message) {
+      messageErrorToast();
+      return;
+    }
 
     const response = await fetch("https://formspree.io/f/xrblyjkq", {
       method: "POST",
@@ -52,6 +61,14 @@ export default function ContactSection() {
       });
     }
   };
+
+  useEffect(() => {
+    if (form.email && form.subject && form.message) {
+      setDisableSubmit(false);
+    } else {
+      setDisableSubmit(true);
+    }
+  }, [form]);
 
   useEffect(() => {
     if (!showSuccess) return;
@@ -136,6 +153,7 @@ export default function ContactSection() {
             type="submit"
             className={styles.button}
             onClick={handleSubmit}
+            disabled={disableSubmit}
           >
             Send Message
           </Button>
