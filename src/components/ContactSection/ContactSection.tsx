@@ -51,7 +51,7 @@ export default function ContactSection() {
   };
 
   useEffect(() => {
-    if (!setShowSuccess) return;
+    if (!showSuccess) return;
     const timer = setTimeout(() => setShowSuccess(false), 3000);
     return () => clearTimeout(timer);
   }, [showSuccess]);
